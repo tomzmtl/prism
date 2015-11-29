@@ -11,6 +11,8 @@
 |
 */
 
+$app->get( '/', 'PageController@index' );
+
 $app->group(
 [
     'prefix' => 'api',
