@@ -24,6 +24,7 @@ class Color
     public function toResponse ()
     {
         $hsl = $this->helper->rgbToHsl($this->red,$this->green,$this->blue);
+        $reverse = $this->helper->rgbToReverse($this->red,$this->green,$this->blue);
 
         return [
             'rgb' =>
@@ -38,6 +39,16 @@ class Color
                 'h' => $hsl[0],
                 's' => $hsl[1],
                 'l' => $hsl[2]
+            ],
+
+            'reverse' =>
+            [
+                'rgb' =>
+                [
+                    'r' => $reverse[0],
+                    'g' => $reverse[1],
+                    'b' => $reverse[2]
+                ]
             ]
         ];
     }

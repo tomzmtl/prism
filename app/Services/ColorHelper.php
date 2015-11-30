@@ -4,9 +4,37 @@ namespace App\Services;
 
 class ColorHelper
 {
-    public function generateNumber ( $max = 255 )
+    const DEFAULT_NUMBER_BASE = 256;
+
+    public function generateNumber ( $max = null )
     {
+        if ( !$max )
+        {
+            $max = self::DEFAULT_NUMBER_BASE - 1;
+        }
+
         return rand( 0, $max );
+    }
+
+    public function reverseNumber ( $number, $base = self::DEFAULT_NUMBER_BASE )
+    {
+        $reverse = $number - ( $base / 2 );
+
+        if ( $reverse < 0 )
+        {
+            $reverse += $base;
+        }
+
+        return $reverse;
+    }
+
+    public function rgbToReverse ( $r, $g, $b )
+    {
+        return [
+            $this->reverseNumber($r),
+            $this->reverseNumber($g),
+            $this->reverseNumber($b)
+        ];
     }
 
     public function rgbToHsl( $r, $g, $b )
