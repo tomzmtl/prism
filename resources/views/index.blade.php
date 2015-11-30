@@ -13,10 +13,15 @@
             body { margin: 0; background: #222; color: white; }
             .colors { overflow: hidden; }
             .color { float: left; width: 10%; padding-bottom: 10%; }
+            h1 a { color: rgb({{ $colors->last()->red }},{{ $colors->last()->green }},{{ $colors->last()->blue }}) }
         </style>
     </head>
     <body>
-        <h1>Color API</h1>
+        <h1>
+            Color API
+            <br>
+            <a href="https://github.com/tomzmtl/Color">github.com/tomzmtl/Color</a>
+        </h1>
 
         <div class="colors">
 
