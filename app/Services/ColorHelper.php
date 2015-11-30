@@ -4,8 +4,12 @@ namespace App\Services;
 
 class ColorHelper
 {
+    public function generateNumber ( $max = 255 )
+    {
+        return rand( 0, $max );
+    }
 
-    public static function rgbToHsl( $r, $g, $b )
+    public function rgbToHsl( $r, $g, $b )
     {
         $oldR = $r;
         $oldG = $g;
@@ -49,7 +53,7 @@ class ColorHelper
         return [ floor($h), floor($s*100), floor($l*100) ];
     }
 
-    public static function hslToRgb( $h, $s, $l )
+    public function hslToRgb( $h, $s, $l )
     {
         $r;
         $g;

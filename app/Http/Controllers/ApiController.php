@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Services\Color;
-use App\Color as ColorModel;
 
 class ApiController extends Controller
 {
@@ -15,17 +14,10 @@ class ApiController extends Controller
 
     public function getColor ()
     {
-        $color = $this->color->create();
+        $model = $this->color->toModel();
+        $model->save();
 
-        $log = new ColorModel;
-
-        $log->red = $color->red();
-        $log->green = $color->green();
-        $log->blue = $color->blue();
-
-        $log->save();
-
-        return response()->json($color->toResponse());
+        return response()->json($this->color->toResponse());
     }
 
 }

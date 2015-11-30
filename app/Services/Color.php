@@ -2,6 +2,8 @@
 
 namespace App\Services;
 
+use App\Color as ColorModel;
+
 class Color
 {
 
@@ -10,18 +12,18 @@ class Color
     private $blue  = 0;
 
 
-    public function create ()
+    public function __construct ( ColorHelper $helper )
     {
-        $this->red   = rand(0,255);
-        $this->green = rand(0,255);
-        $this->blue  = rand(0,255);
+        $this->helper = $helper;
 
-        return $this;
+        $this->red   = $this->helper->generateNumber();
+        $this->green = $this->helper->generateNumber();
+        $this->blue  = $this->helper->generateNumber();
     }
 
     public function toResponse ()
     {
-        $hsl = ColorHelper::rgbToHsl($this->red,$this->green,$this->blue);
+        $hsl = $this->helper->rgbToHsl($this->red,$this->green,$this->blue);
 
         return [
             'rgb' =>
@@ -40,20 +42,15 @@ class Color
         ];
     }
 
-    public function red ()
+    public function toModel ()
     {
-        return $this->red;
-    }
+        $model = new ColorModel;
 
-    public function green ()
-    {
-        return $this->green;
-    }
+        $model->red = $this->red;
+        $model->green = $this->green;
+        $model->blue = $this->blue;
 
-    public function blue ()
-    {
-        return $this->blue;
+        return $model;
     }
-
 
 }
