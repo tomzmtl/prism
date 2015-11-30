@@ -2,8 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\Color;
-use App\Color as ColorModel;
+use App\Color;
 
 class PageController extends Controller
 {
@@ -14,10 +13,7 @@ class PageController extends Controller
 
     public function index ()
     {
-        $model = $this->color->toModel();
-        $model->save();
-
-        $colors = ColorModel::all();
+        $colors = Color::all()->reverse();
 
         return view('index')->with(compact('colors'));
     }

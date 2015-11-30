@@ -13,7 +13,7 @@
             body { margin: 0; background: #222; color: white; }
             .colors { overflow: hidden; }
             .color { float: left; width: 10%; padding-bottom: 10%; }
-            h1 a { color: rgb({{ $colors->last()->red }},{{ $colors->last()->green }},{{ $colors->last()->blue }}) }
+            h1 a, h2 a { color: rgb({{ $colors->first()->red }},{{ $colors->first()->green }},{{ $colors->first()->blue }}) }
         </style>
     </head>
     <body>
@@ -23,13 +23,15 @@
             <a href="https://github.com/tomzmtl/Color">github.com/tomzmtl/Color</a>
         </h1>
 
+        <h2><a href="{{ url('api/get') }}">Randomize Color >>></a></h2>
+
         <div class="colors">
 
-            <?php foreach ( $colors as $color ) : ?>
+            @foreach ( $colors as $color )
 
                 <div class="color" style="background:rgb(<?php echo $color->red ?>,<?php echo $color->green ?>,<?php echo $color->blue ?>)"></div>
 
-            <?php endforeach ?>
+            @endforeach
 
         </div>
 
