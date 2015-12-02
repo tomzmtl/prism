@@ -8,11 +8,9 @@
 
         <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
 
+        <link rel="stylesheet" href="{{ url('css/styles.css') }}">
+
         <style>
-            * { box-sizing: border-box; font-family: Montserrat; text-align: center; }
-            body { margin: 0; background: #222; color: white; }
-            .colors { overflow: hidden; }
-            .color { float: left; width: 10%; padding-bottom: 10%; }
             h1 a, h2 a { color: rgb({{ $colors->first()->red }},{{ $colors->first()->green }},{{ $colors->first()->blue }}) }
         </style>
     </head>
