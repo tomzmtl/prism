@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Color;
+use App\Services\ColorHelper;
 
 class PageController extends Controller
 {
@@ -15,10 +16,12 @@ class PageController extends Controller
     {
         $colors = Color::all()->reverse();
 
+        $themeC = $colors->random();
+
         return view('index')->with(
         [
             'colors' => $colors,
-            'themeC' => $colors->random()
+            'themeC' => $themeC
         ]);
     }
 

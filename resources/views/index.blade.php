@@ -12,7 +12,8 @@
 
         <style>
             header a,
-            header span { color: rgb({{ $themeC->red }},{{ $themeC->green }},{{ $themeC->blue }}) }
+            header span,
+            footer a { color: rgb({{ $themeC->red }},{{ $themeC->green }},{{ $themeC->blue }}) }
         </style>
     </head>
     <body>

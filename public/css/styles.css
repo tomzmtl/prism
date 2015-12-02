@@ -42,3 +42,7 @@ header {
     text-align: center;
     text-transform: uppercase;
     text-decoration: none; }
+
+footer {
+  padding: 5% 0;
+  text-align: center; }
