@@ -37,7 +37,7 @@ class ColorHelper
         ];
     }
 
-    public static function rgbToHsl( $r, $g, $b )
+    public function rgbToHsl( $r, $g, $b )
     {
         $oldR = $r;
         $oldG = $g;
