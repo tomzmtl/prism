@@ -6,22 +6,23 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:700' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
 
         <link rel="stylesheet" href="{{ url('css/styles.css') }}">
 
         <style>
-            h1 a, h2 a { color: rgb({{ $colors->first()->red }},{{ $colors->first()->green }},{{ $colors->first()->blue }}) }
+            header a,
+            header span { color: rgb({{ $themeC->red }},{{ $themeC->green }},{{ $themeC->blue }}) }
         </style>
     </head>
     <body>
-        <h1>
-            Color API
-            <br>
-            <a href="https://github.com/tomzmtl/Color">github.com/tomzmtl/Color</a>
-        </h1>
-
-        <h2><a href="{{ url('api/get') }}">Randomize Color >>></a></h2>
+        <header>
+            <h1>
+                <strong>Color API</strong>
+                <span>A JSON API that generates colors!</span>
+            </h1>
+            <a href="{{ url('api/get') }}">Try it!</a>
+        </header>
 
         <div class="colors">
 
@@ -32,6 +33,10 @@
             @endforeach
 
         </div>
+
+        <footer>
+            <a href="https://github.com/tomzmtl/Color">github.com/tomzmtl/Color</a>
+        </footer>
 
     </body>
 </html>

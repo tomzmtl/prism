@@ -15,7 +15,11 @@ class PageController extends Controller
     {
         $colors = Color::all()->reverse();
 
-        return view('index')->with(compact('colors'));
+        return view('index')->with(
+        [
+            'colors' => $colors,
+            'themeC' => $colors->random()
+        ]);
     }
 
 }
