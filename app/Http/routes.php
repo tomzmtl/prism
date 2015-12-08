@@ -20,5 +20,5 @@ $app->group(
 ],
 function ($app)
 {
-    $app->get( 'get', 'ApiController@getColor');
+    $app->get( 'color', 'ApiController@getColor');
 });
