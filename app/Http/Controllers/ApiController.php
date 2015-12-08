@@ -10,6 +10,7 @@ class ApiController extends Controller
     public function __construct ( Color $color )
     {
         $this->color = $color;
+        header('Access-Control-Allow-Origin: *');
     }
 
     public function getColor ()
