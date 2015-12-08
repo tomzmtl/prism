@@ -11,7 +11,6 @@
         <link rel="stylesheet" href="{{ url('css/styles.css') }}">
 
         <style>
-            header a,
             header span,
             footer a { color: rgb({{ $themeC->red }},{{ $themeC->green }},{{ $themeC->blue }}) }
         </style>
@@ -22,17 +21,33 @@
                 <strong>Color API</strong>
                 <span>A JSON API that generates colors!</span>
             </h1>
-            <a href="{{ url('api/get') }}">Try it!</a>
+            {{--
+            <div class="try">
+                <a href="{{ url('api/get') }}">Try it!</a>
+            </div>
+            --}}
         </header>
 
-        <div class="colors">
+        <div class="color-wrap">
+            <div class="colors front">
 
-            @foreach ( $colors as $color )
+                @foreach ( $colors as $color )
 
-                <div class="color" style="background:rgb(<?php echo $color->red ?>,<?php echo $color->green ?>,<?php echo $color->blue ?>)"></div>
+                    <div class="color" style="background:rgb(<?php echo $color->red ?>,<?php echo $color->green ?>,<?php echo $color->blue ?>)"></div>
 
-            @endforeach
+                @endforeach
 
+            </div>
+
+            <div class="colors back">
+
+                @foreach ( $colors as $color )
+
+                    <div class="color" style="background:rgb(<?php echo $color->red ?>,<?php echo $color->green ?>,<?php echo $color->blue ?>)"></div>
+
+                @endforeach
+
+            </div>
         </div>
 
         <footer>
