@@ -9,14 +9,14 @@ body {
 
 header,
 footer {
-  width: 100%;
   position: fixed;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
+  left: 0;
+  width: 100%;
+  text-align: center;
   z-index: 100; }
 
 header {
+  top: 0;
   background: linear-gradient(to top, rgba(30, 30, 30, 0.9) 0%, #1e1e1e 100%);
   font-size: 2rem; }
   header h1 {
@@ -60,6 +60,7 @@ header {
   padding-bottom: 10%; }
 
 footer {
+  bottom: 0;
   padding: 1em;
   bottom: 0;
   background: rgba(30, 30, 30, 0.9);
