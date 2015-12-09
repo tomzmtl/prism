@@ -82,21 +82,36 @@ header
 footer
 {
     bottom: 0;
-    padding: 1em;
+    padding: 3vh 0;
     bottom: 0;
-    background: rgba(30,30,30,0.9);
+    background: linear-gradient(to bottom, rgba(30,30,30,0.9) 0%, rgba(30,30,30,1) 100%);
     text-align: center;
+    font-size: 1.4rem;
+
+    .wrap
+    {
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        max-width: 660px;
+        margin: 0 auto;
+    }
 
     a
     {
-        text-transform: uppercase;
         text-decoration: none;
+    }
+
+    .try
+    {
+        text-transform: uppercase;
+        color: white;
     }
 }
 
 
 
-@media ( max-width: 560px )
+@media ( max-width: 600px )
 {
     header
     {
@@ -107,5 +122,24 @@ footer
     {
         width: 20%;
         padding-bottom: 20%;
+    }
+}
+
+@media ( max-width: 660px )
+{
+    footer
+    {
+        font-size: 1rem;
+
+        .wrap
+        {
+            display: block;
+        }
+
+        a
+        {
+            display: inherit;
+            padding: 1vh 0;
+        }
     }
 }

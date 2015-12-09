@@ -65,7 +65,10 @@
         </div>
 
         <footer>
-            <a href="https://github.com/tomzmtl/Color">github.com/tomzmtl/Color</a>
+            <div class="wrap">
+                <a href="https://github.com/tomzmtl/Color" class="github">github.com/tomzmtl/Color</a>
+                <a href="{{ url('api') }}/color" target="blank" class="try">Try it now !</a>
+            </div>
         </footer>
 
     </body>
