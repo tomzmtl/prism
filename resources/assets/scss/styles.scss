@@ -1,7 +1,6 @@
 * { box-sizing: border-box }
 
-body
-{
+body {
     font-family: Montserrat;
     margin: 0 auto;
     background: rgb(30,30,30);
@@ -9,8 +8,7 @@ body
 }
 
 header,
-footer
-{
+footer {
     position: fixed;
     left: 0;
     width: 100%;
@@ -18,33 +16,28 @@ footer
     z-index: 100;
 }
 
-header
-{
+header {
     top: 0;
     background: linear-gradient(to top, rgba(30,30,30,0.9) 0%, rgba(30,30,30,1) 100%);
     font-size: 2rem;
 
-    h1
-    {
+    h1 {
         margin: 1em 0 1em 0;
         line-height: 0.4;
         text-align: center;
     }
 
-    strong
-    {
+    strong {
         display: block;
     }
 
-    span
-    {
+    span {
         font-size: 0.3em;
         font-weight: 400;
     }
 }
 
-.color-wrap
-{
+.color-wrap {
     position: relative;
     margin: 0 auto;
     width: 80%;
@@ -52,18 +45,15 @@ header
     transform: translateZ(0);
 }
 
-.colors
-{
+.colors {
     display: flex;
     flex-wrap: wrap;
 
-    &.back
-    {
+    &.back {
         filter: blur(50px);
     }
 
-    &.front
-    {
+    &.front {
         position: absolute;
         top: 0;
         left: 0;
@@ -73,14 +63,12 @@ header
     }
 }
 
-.color
-{
+.color {
     width: 10%;
     padding-bottom: 10%;
 }
 
-footer
-{
+footer {
     bottom: 0;
     padding: 3vh 0;
     bottom: 0;
@@ -88,8 +76,7 @@ footer
     text-align: center;
     font-size: 1.4rem;
 
-    .wrap
-    {
+    .wrap {
         display: flex;
         justify-content: space-between;
         width: 90%;
@@ -97,13 +84,11 @@ footer
         margin: 0 auto;
     }
 
-    a
-    {
+    a {
         text-decoration: none;
     }
 
-    .try
-    {
+    .try {
         text-transform: uppercase;
         color: white;
     }
@@ -113,13 +98,11 @@ footer
 
 @media ( max-width: 600px )
 {
-    header
-    {
+    header {
         font-size: 1.6rem;
     }
 
-    .color
-    {
+    .color {
         width: 20%;
         padding-bottom: 20%;
     }
@@ -127,17 +110,14 @@ footer
 
 @media ( max-width: 660px )
 {
-    footer
-    {
+    footer {
         font-size: 1rem;
 
-        .wrap
-        {
+        .wrap {
             display: block;
         }
 
-        a
-        {
+        a {
             display: inherit;
             padding: 1vh 0;
         }
