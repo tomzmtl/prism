@@ -39,16 +39,6 @@ class Color
                 'h' => $hsl[0],
                 's' => $hsl[1],
                 'l' => $hsl[2]
-            ],
-
-            'reverse' =>
-            [
-                'rgb' =>
-                [
-                    'r' => $reverse[0],
-                    'g' => $reverse[1],
-                    'b' => $reverse[2]
-                ]
             ]
         ];
     }
