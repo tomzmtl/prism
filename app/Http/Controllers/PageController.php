@@ -10,7 +10,7 @@ class PageController extends Controller
 
     public function index ()
     {
-        $colors = Color::all();
+        $colors = Color::take(500)->get();
 
         if ( $colors->count() % 10 )
         {
