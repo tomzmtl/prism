@@ -16,6 +16,7 @@ Colors are sent as RGB in the following format:
     "r" : 45,
     "g" : 234,
     "b" : 89
+  }
 }
 ```
 
