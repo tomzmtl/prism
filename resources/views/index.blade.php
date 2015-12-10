@@ -2,8 +2,8 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Color API</title>
-        <meta name="description" content="">
+        <title>Prism API</title>
+        <meta name="description" content="Prism is a small API that delivers RGB colors in JSON format.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
@@ -32,7 +32,7 @@
 
         <header>
             <h1>
-                <strong>Color API</strong>
+                <strong>Prism</strong>
                 <span>A JSON API that generates colors!</span>
             </h1>
         </header>
@@ -61,7 +61,7 @@
 
         <footer>
             <div class="wrap">
-                <a href="https://github.com/tomzmtl/Color" class="github">github.com/tomzmtl/Color</a>
+                <a href="https://github.com/tomzmtl/Color" class="github">github.com/tomzmtl/Prism</a>
                 <a href="{{ url('api') }}/color" target="blank" class="try">Try it now !</a>
             </div>
         </footer>
