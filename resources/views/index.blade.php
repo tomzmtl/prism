@@ -12,7 +12,7 @@
 
         <style>
             header span,
-            footer a { color: rgb({{ $themeC->red }},{{ $themeC->green }},{{ $themeC->blue }}) }
+            footer a { color: rgb({{ $themeC->r }},{{ $themeC->g }},{{ $themeC->b }}) }
         </style>
     </head>
     <body>
@@ -35,11 +35,6 @@
                 <strong>Color API</strong>
                 <span>A JSON API that generates colors!</span>
             </h1>
-            {{--
-            <div class="try">
-                <a href="{{ url('api/get') }}">Try it!</a>
-            </div>
-            --}}
         </header>
 
         <div class="color-wrap">

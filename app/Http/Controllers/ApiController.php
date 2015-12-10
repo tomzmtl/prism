@@ -2,23 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Services\Color;
+use App\Color\Rgb;
 
 class ApiController extends Controller
 {
 
-    public function __construct ( Color $color )
+    public function __construct ()
     {
-        $this->color = $color;
         header('Access-Control-Allow-Origin: *');
     }
 
     public function getColor ()
     {
-        $model = $this->color->toModel();
-        $model->save();
+        $rgb = new Rgb();
 
-        return response()->json($this->color->toResponse());
+        $model = $rgb->randomize()->toModel()->save();
+
+        return response()->json($rgb->toResponse());
     }
 
 }
