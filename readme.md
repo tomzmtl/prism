@@ -4,7 +4,7 @@ A color-generation API.
 
 ### Endpoints
 
-| `api/color` | Gets a randomly-generated color. |
+`api/color` Gets a randomly-generated color.
 
 ### Technology stack
 
