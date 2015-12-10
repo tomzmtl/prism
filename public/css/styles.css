@@ -96,4 +96,6 @@ footer {
       display: block; }
     footer a {
       display: inherit;
-      padding: 1vh 0; } }
+      padding: 1vh 0; }
+    footer .github {
+      font-size: 0.9em; } }
