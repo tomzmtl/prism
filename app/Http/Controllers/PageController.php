@@ -20,6 +20,11 @@ class PageController extends Controller
         $c = $colors->random();
         $themeColor = new Rgb($c->red,$c->green,$c->blue);
 
+        // If random color is too dark, create a bright version.
+        if ( $themeColor->lightness() < 100 )
+        {
+            $themeColor = new Rgb($themeColor->r+50, $themeColor->g+50, $themeColor->b+50);
+        }
 
         if ( env('NEW_COLOR_ON_INDEX_LOAD') )
         {
