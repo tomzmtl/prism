@@ -1,10 +1,11 @@
 # Prism
 
-A color-generation API.
+A small API that returns RGB colors as JSON.
+
 
 ### Endpoints
 
-`api/color` Gets a randomly-generated color in RGB format.
+`GET` `api/color` Gets a randomly-generated color in RGB format. Adds it as new entry in DB.
 
 ### Color format
 
@@ -19,6 +20,14 @@ Colors are sent as RGB in the following format:
   }
 }
 ```
+
+### Roadmap
+
+#### Next endpoint available
+
+`GET` `api/colors/{N}` Fetch N colors, randomly.
+
+Open `api/colors` to fetch colors from the history database.
 
 ### Technology stack
 
